@@ -12,4 +12,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 # Override the entrypoint to not be uv
 ENTRYPOINT []
 
-CMD ["uvicorn", "package_name.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "cas_sdss_mcp.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
