@@ -9,6 +9,8 @@
 
 ![SSEC-JHU Logo](docs/_static/SSEC_logo_horiz_blue_1152x263.png)
 
+Based on https://github.com/nicknochnack/BuildMCPServer
+
 Base repo template to be used by all others.
 
 Things to do when using this template:
