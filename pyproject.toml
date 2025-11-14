@@ -12,8 +12,6 @@ license-files = ["LICENSE"]
 
 requires-python = ">=3.11"
 dependencies = [
-    "fastapi[all]",
-    "ipykernel>=7.1.0",
     "mcp[cli]>=1.3.0",
     "pandas>=2.3.3",
     "pip>=25.3",
@@ -22,9 +20,9 @@ dependencies = [
 ]
 
 [project.urls]
-homepage = "https://github.com/ssec-jhu/base-template"
-documentation = "https://github.com/ssec-jhu/base-template"
-repository = "https://github.com/ssec-jhu/base-template"
+homepage = "https://github.com/idies/cas-jobs-sdss-mcp"
+documentation = "https://github.com/idies/cas-jobs-sdss-mcp"
+repository = "https://github.com/idies/cas-jobs-sdss-mcp"
 
 [build-system]
 requires = ["setuptools>=61.2", "setuptools_scm[toml]>=8.0"]
@@ -126,27 +124,22 @@ multiline-quotes = "double"  # https://docs.astral.sh/ruff/settings/#lint_flake8
 
 [dependency-groups]
 build = [
-    "build==1.2.2.post1",
     "setuptools==80.9.0",
-    "setuptools-scm[toml]==8.3.1",
 ]
 docs = [
-    "gitpython==3.1.44",
     "nbsphinx==0.9.7",
-    "sphinx==6.2.1",
     "sphinx-automodapi==0.19.0",
-    "sphinx-book-theme==1.1.4",
     "sphinx-rtd-theme==3.0.2",
 ]
 prd = [
-    "fastapi[all]==0.115.12",
-    "uvicorn[standard]==0.34.3",
+    "mcp[cli]>=1.21.1",
+    "pandas==2.3.3",
+    "pip==25.3",
+    "pyarrow==22.0.0",
+    "requests==2.32.5",
 ]
 test = [
-    "bandit==1.8.3",
-    "gitpython==3.1.44",
     "pytest==8.3.5",
-    "pytest-cov==6.1.1",
     "ruff==0.11.12",
 ]
 all = [
