@@ -1,12 +1,12 @@
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
-from package_name import __project__, __version__
+from cas_sdss_mcp import __project__, __version__
 
 
 project = __project__
-copyright = '2023, SSEC-JHU'
-author = 'SSEC-JHU'
+copyright = '2023, JHU'
+author = 'JHU'
 
 release = __version__
 version = __version__
