@@ -50,5 +50,6 @@ def get_columns(table_name: str) -> list[tuple[str, str]]:
 def main():
     mcp.run(transport="stdio")
 
+
 if __name__ == "__main__":
     main()
