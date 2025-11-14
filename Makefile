@@ -36,7 +36,7 @@ setup:
 
 # Runs the tests using pytest and generates coverage reports
 test:
-	uv run --group test --group prd --locked pytest -v --cov=package_name --cov-report=xml --cov-report=html
+	uv run --group test --group prd --locked pytest -v --cov=cas_sdss_mcp --cov-report=xml --cov-report=html
 
 # https://stackoverflow.com/a/77245502/2691018
 ## Print this help
