@@ -1,0 +1,5 @@
+include cas_sdss_mcp/data/tbls_cols.parquet
+prune .github
+prune docs
+prune notebooks
+prune tests

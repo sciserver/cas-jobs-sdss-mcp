@@ -3,11 +3,12 @@
 name = "cas_sdss_mcp"  # Replace cas_sdss_mcp with actual name (it's just a template).
 dynamic = ["version"]
 authors = [
-    {name = "Scientifc Software Engineering Center at JHU", email = "ssec@jhu.edu"},
+    {name = "JHU Data Science and AI Institute", email = "ai@jhu.edu"},
 ]
-description = ""
+description = "An MCP service for building queries against SDSS catalogs."
 readme = "README.md"
-license = {file = "LICENSE"}
+license-files = ["LICENSE"]
+
 
 requires-python = ">=3.11"
 dependencies = [
@@ -16,6 +17,7 @@ dependencies = [
     "mcp[cli]>=1.3.0",
     "pandas>=2.3.3",
     "pip>=25.3",
+    "pyarrow>=22.0.0",
     "requests>=2.32.5",
 ]
 
@@ -31,7 +33,25 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 zip-safe = false
 include-package-data = true
-exclude-package-data = {"*" = ["tests/*"]}
+exclude-package-data = {"*" = [
+    "tests/*",
+    "docs/*",
+    ".github/*",
+    ".coveragerc",
+    ".gitignore",
+    ".zenodo.json",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "MANIFEST.in",
+    "CODEOWNERS",
+    "README.md",
+    "codecov.yml",
+    "sqlxmatch_data.json",
+    "Makefile",
+]}
+
+
 
 [tool.setuptools.packages.find]
 include = ["cas_sdss_mcp*"]
@@ -39,6 +59,9 @@ exclude = ["*.tests*"]
 
 [tool.setuptools_scm]
 write_to = "cas_sdss_mcp/_version.py"
+
+[project.scripts]
+cas_sdss_mcp = "cas_sdss_mcp.app:main"
 
 [tool.bandit]
 exclude_dirs = ["tests"]

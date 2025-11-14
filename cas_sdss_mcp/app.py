@@ -3,7 +3,9 @@
 import pandas as pd
 from mcp.server.fastmcp import FastMCP
 
-data = pd.read_json("sqlxmatch_data.json")
+from cas_sdss_mcp.util import find_package_location
+
+data = pd.read_parquet(find_package_location() / "data/tbls_cols.parquet")
 
 # Server created
 mcp = FastMCP("cas-sdss-mcp")
@@ -45,5 +47,8 @@ def get_columns(table_name: str) -> list[tuple[str, str]]:
     return filtered.loc[:, ["column_name", "description"]].apply(tuple, axis=1).tolist()
 
 
-if __name__ == "__main__":
+def main():
     mcp.run(transport="stdio")
+
+if __name__ == "__main__":
+    main()
