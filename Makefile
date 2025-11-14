@@ -19,7 +19,7 @@ check-env:
 
 # Builds the package distribution using build
 dist:
-	uv run --group build --locked python -m build --no-isolation
+	uv build
 
 # Build the documentation using Sphinx
 docs:
