@@ -139,7 +139,7 @@ prd = [
     "requests==2.32.5",
 ]
 test = [
-    "pytest==8.3.5",
+    "pytest==9.0.2",
     "pytest-cov==7.0.0",
     "ruff==0.11.12",
 ]
