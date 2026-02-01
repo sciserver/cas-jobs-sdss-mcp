@@ -134,7 +134,7 @@ docs = [
 prd = [
     "mcp[cli]>=1.21.1",
     "pandas==2.3.3",
-    "pip==25.3",
+    "pip==26.0",
     "pyarrow==22.0.0",
     "requests==2.32.5",
 ]
