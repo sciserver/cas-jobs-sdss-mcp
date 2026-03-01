@@ -127,9 +127,9 @@ build = [
     "setuptools==80.9.0",
 ]
 docs = [
-    "nbsphinx==0.9.7",
-    "sphinx-automodapi==0.19.0",
-    "sphinx-rtd-theme==3.0.2",
+    "nbsphinx==0.9.8",
+    "sphinx-automodapi==0.22.0",
+    "sphinx-rtd-theme==3.1.0",
 ]
 prd = [
     "mcp[cli]>=1.21.1",
@@ -141,7 +141,7 @@ prd = [
 test = [
     "pytest==8.3.5",
     "pytest-cov==7.0.0",
-    "ruff==0.11.12",
+    "ruff==0.15.4",
 ]
 all = [
     {include-group = "build"},
